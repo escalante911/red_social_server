@@ -1,9 +1,8 @@
-defmodule ZoneSocialWeb.PageController do
+defmodule ZoneSocialWeb.UserController do
   use ZoneSocialWeb, :controller
 
   def index(conn, _params) do
     %Plug.Conn{}
-    render(conn, "index.html")
+    render(conn, "user.html")
   end
-
 end

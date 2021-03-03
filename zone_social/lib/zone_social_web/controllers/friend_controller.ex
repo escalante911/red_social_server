@@ -1,7 +1,8 @@
 defmodule ZoneSocialWeb.FriendController do
   use ZoneSocialWeb, :controller
 
-  def friend(conn, _params) do
+  def index(conn, _params) do
+    %Plug.Conn{}
     render(conn, "friend.html")
   end
 end

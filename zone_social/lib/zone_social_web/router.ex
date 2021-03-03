@@ -7,6 +7,7 @@ defmodule ZoneSocialWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug ZoneSocialWeb.Plugs.Locale, "en"
   end
 
   pipeline :api do
@@ -17,7 +18,16 @@ defmodule ZoneSocialWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    get "/friend", FriendController, :friend
+    # get "/friend", FriendController, :index
+    #get "/user", UserController, :index
+    # get "/", UserController, :index
+    # resources "/friend", FriendController
+    resources "/user", UserController, only: [:index, :show] do
+      resources "/post", PostController, only: [:index, :show]
+      resources "/friend", FriendController #, only: [:index, :show]
+    end
+
+    resources "/look", LookController, only: [:index, :show]
   end
 
   # Other scopes may use custom stacks.
