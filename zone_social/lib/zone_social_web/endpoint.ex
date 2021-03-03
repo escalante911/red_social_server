@@ -7,7 +7,7 @@ defmodule ZoneSocialWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_zone_social_key",
-    signing_salt: "Ie9TZvLX"
+    signing_salt: "Ys47sxXM"
   ]
 
   socket "/socket", ZoneSocialWeb.UserSocket,

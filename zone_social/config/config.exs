@@ -10,10 +10,10 @@ use Mix.Config
 # Configures the endpoint
 config :zone_social, ZoneSocialWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "euftFjiPjXfjVtxVGTgVpwxmX1lg+3fjZhcf96kpQJqsUYY0h7DedYf4GI++AasW",
+  secret_key_base: "+Y/a4ee+dVCPQ/MqBD54kzNCpWTmU+DY9E/B3nMnp//aRVopkU7Vf1h8OOUbVuBV",
   render_errors: [view: ZoneSocialWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: ZoneSocial.PubSub,
-  live_view: [signing_salt: "TQUPF6C+"]
+  live_view: [signing_salt: "0aELIspw"]
 
 # Configures Elixir's Logger
 config :logger, :console,

@@ -19,9 +19,10 @@ defmodule ZoneSocial.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
+      # applications: [:mongodb, :poolboy],
       mod: {ZoneSocial.Application, []},
-      extra_applications: [:logger, :runtime_tools],
-      applications: [:mongodb, :poolboy]
+      extra_applications: [:logger, :runtime_tools]
+
     ]
   end
 

@@ -13,7 +13,7 @@
       <section class="container">
       <nav role="navigation">
           <ul>
-            <li><a href="friend">Friend</a></li>
+            <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
             <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
               <li><%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home) %></li>
             <% end %>
@@ -31,7 +31,7 @@
             <div class="well well-sm">
                 <form class="form-horizontal" method="post">
                     <fieldset>
-                        <legend class="text-center header">User</legend>
+                        <legend class="text-center header">Friends</legend>
 
                         <div class="form-group">
                             <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>

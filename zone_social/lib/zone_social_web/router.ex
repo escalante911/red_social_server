@@ -17,6 +17,7 @@ defmodule ZoneSocialWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/friend", FriendController, :friend
   end
 
   # Other scopes may use custom stacks.
