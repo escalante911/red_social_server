@@ -45,7 +45,8 @@ defmodule ZoneSocial.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:mongodb, ">= 0.0.0"},
-      {:poolboy, ">= 0.0.0"}
+      {:poolboy, ">= 0.0.0"},
+      {:httpotion, "~> 3.1.0"}
     ]
   end
 

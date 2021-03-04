@@ -19,6 +19,11 @@ def consulta_users(conn) do
   result |> Enum.to_list() |> IO.inspect
 end
 
+def consulta_user(conn, nombre) do
+  result = Mongo.find(conn, "user", %{"name": nombre})
+  result |> Enum.to_list() |> IO.inspect
+end
+
 
 
 end

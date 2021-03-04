@@ -14,6 +14,14 @@ defmodule ZoneSocialWeb.Router do
     plug :accepts, ["json"]
   end
 
+  scope "/api", UsersController, as: :api do
+    pipe_through :api
+
+    scope "/v1", Api.V1, as: :v1 do
+      resources "/users", UsersController, only: [:index, :show]
+    end
+  end
+
   scope "/", ZoneSocialWeb do
     pipe_through :browser
 
@@ -22,10 +30,10 @@ defmodule ZoneSocialWeb.Router do
     #get "/user", UserController, :index
     # get "/", UserController, :index
     # resources "/friend", FriendController
-    resources "/user", UserController, only: [:index, :show] do
-      resources "/post", PostController, only: [:index, :show]
-      resources "/friend", FriendController #, only: [:index, :show]
-    end
+    resources "/user", UserController, only: [:index, :show]
+    resources "/post", PostController, only: [:index, :show]
+    resources "/friend", FriendController #, only: [:index, :show]
+
 
     resources "/look", LookController, only: [:index, :show]
   end
