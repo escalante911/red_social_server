@@ -16,14 +16,14 @@ defmodule ZoneSocialWeb.PostController do
  #   })
  # end
 
- def show() do
-   {:ok, conn} = Mongo.start_link(url: "mongodb://localhost:27027/zone-social", username: "root", password: "pass", auth_source: "admin")
-   poster = Post.consulta_post(conn)
-   json(conn, %{
-     id: poster.id,
-     post: poster.post,
-     user: poster.user
-   })
- end
+# def show() do
+#   {:ok, conn} = Mongo.start_link(url: "mongodb://localhost:27027/zone-social", username: "root", password: "pass", auth_source: "admin")
+#   poster = Post.consulta_post(conn)
+#   json(conn, %{
+#     id: poster.id,
+#     post: poster.post,
+#     user: poster.user
+#   })
+# end
 
 end
