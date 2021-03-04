@@ -1,4 +1,4 @@
-defmodule FriendRepo do
+defmodule ZoneSocial.Friend do
 
 # Se ejecuta una sola vez al incicio de los procesos guardando el retorno en una variable conn
 def conec(db) do

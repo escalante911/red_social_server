@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="well well-sm">
-                <form name = "inserta_user" class="form-horizontal" method="post">
+                <form name = "inserta_user" action = "friend.html" class="form-horizontal" method="post">
                     <fieldset>
                         <legend class="text-center header">User</legend>
 
@@ -30,9 +30,9 @@
                     </fieldset>
                 </form>
                <%      
-                       conn = UserRepo.conec("zone-social")
+                      # conn = User.conec("zone-social")
                       # nombre = input_value(post(), inserta_user.post(), inserta_user.name())
-                       UserRepo.insert_user(conn, "name", "user") 
+                      # UserRepo.insert_user(conn, "name", "user") 
                %>
             </div>
         </div>

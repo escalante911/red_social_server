@@ -1,8 +1,8 @@
-defmodule UserRepo do
+defmodule ZoneSocial.User do
 
 # Se ejecuta una sola vez al incicio de los procesos guardando el retorno en una variable conn
-def conec(db) do
-  {:ok, conn} = Mongo.start_link(url: "mongodb://localhost:27027/#{db}", username: "root", password: "pass", auth_source: "admin")
+def conec() do
+  {:ok, conn} = Mongo.start_link(url: "mongodb://localhost:27027/zone-social", username: "root", password: "pass", auth_source: "admin")
   conn
 end
 
@@ -18,5 +18,7 @@ def consulta_users(conn) do
   result = Mongo.find(conn, "user", %{})
   result |> Enum.to_list() |> IO.inspect
 end
+
+
 
 end

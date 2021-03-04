@@ -1,4 +1,4 @@
-defmodule PostRepo do
+defmodule ZoneSocial.Post do
 
 # Se ejecuta una sola vez al incicio de los procesos guardando el retorno en una variable conn
 def conec(db) do
