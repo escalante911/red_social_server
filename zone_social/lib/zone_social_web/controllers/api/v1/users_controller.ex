@@ -16,3 +16,5 @@ defmodule UsersController.Api.V1.UsersController do
   end
 
 end
+
+# docker build -t username/nameproyect:version .
